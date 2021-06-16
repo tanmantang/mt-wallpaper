@@ -14,3 +14,5 @@
 2. 金山词霸每日英语壁纸，以及下载功能
 3. 新增图片https地址
 4. 新增API请求文件
+
+![图片alt](https://p.pstatp.com/origin/pgc-image/6088f4ca6d574a6fbf098460cd5cc14b "图片title")
