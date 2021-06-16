@@ -34,7 +34,6 @@ switch($cid)
         echojson (file_get_contents("http://wallpaper.apc.360.cn/index.php?c=WallPaper&a=getAppsByCategory&cid={$cid}&start={$start}&count={$count}&from=360chrome"));
 }
 
-
 /**
  * 获取GET或POST过来的参数
  * @param $key 键值
