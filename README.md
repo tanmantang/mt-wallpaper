@@ -17,4 +17,4 @@
 
 ### 体验地址 [https://bizhi.tanmantang.com](https://bizhi.tanmantang.com "https://bizhi.tanmantang.com")
 
-![图片alt](https://p.pstatp.com/origin/pgc-image/6088f4ca6d574a6fbf098460cd5cc14b "图片title")
+![首页截图](https://p.pstatp.com/origin/pgc-image/6088f4ca6d574a6fbf098460cd5cc14b "首页截图")
