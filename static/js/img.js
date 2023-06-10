@@ -1,5 +1,5 @@
 var seting = {
-	apiUrl: "api.php",
+	apiUrl: "https://api.tanmantang.com/api/bizhi.php",
 	ratio: 0.618,
 	types: '360new',
 	downApi: 'https://image.baidu.com/search/down?tn=download&word=download&ie=utf8&fr=detail&url='
