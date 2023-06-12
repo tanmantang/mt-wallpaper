@@ -1,5 +1,5 @@
 var seting = {
-	apiUrl: "https://api.tanmantang.com/api/bizhi.php",
+	apiUrl: "https://api.tanmantang.com/bizhi.php",
 	ratio: 0.618,
 	types: '360new',
 	downApi: 'https://image.baidu.com/search/down?tn=download&word=download&ie=utf8&fr=detail&url='
@@ -42,12 +42,13 @@ $("#toolBall").click(function(){
 });
 
 console["log"](
-	"%c \u57fa\u4e8e\u4e8c\u5f00\u7f8e\u5316\u7248\u4fee\u6539 \u8bf7\u52ff\u76d7\u7248 @tanmantang.com qq\uff1a1059767677 %c",
+	"%c \u57fa\u4e8e\u4e8c\u5f00\u7f8e\u5316\u7248\u4fee\u6539 @tanmantang.com qq\uff1a1059767677 %c",
 	"color: #fadfa3; background: #030307; padding:5px", "background: #fadfa3; padding:5px");
 
 
 // 加载壁纸容器中的壁纸
 function loadData(types, newload) {
+    console.log("types:"+types+",newload:"+newload);
 	if (types != seting.types || newload === true) {
 		seting.types = types;
 		jigsaw = {
@@ -109,6 +110,7 @@ function addJigsaw(img, alt) {
 	if (jigsaw.halfHtml !== '') {
 		imgWidth = parseInt(screen.width / 4);
 		imgHeight = parseInt(imgWidth * seting.ratio);
+		console.log("这是IMG_"+img);
 		newHtml = '<div class="Hhalf oneImg"><a href="' + decode360Url(img, 0, 0, 100) +
 			'" data-fancybox="images"><img  src="' + decode360Url(img, imgWidth, imgHeight, 0) + '" alt="' + alt +
 			'"title="关键字：' + alt + '" class="pimg"></a>    </div></div>';
@@ -171,6 +173,7 @@ function ajaxBingWal(start, count){
         data: "cid=bing&start=" + start + "&count=" + count,
         dataType : "json",
         success: function(jsonData){
+            console.log("这是jsonData_"+jsonData);
             var newHtml = '<link rel="stylesheet" href="../../static/css/onepage-scroll.css">',downUrl = '';
             $("#walBox").append(newHtml);   // 全屏滚动插件css
             if (IsPC()){
@@ -258,8 +261,10 @@ function ajax360Wal(cid, start, count) {
 		data: "cid=" + cid + "&start=" + start + "&count=" + count,
 		dataType: "json",
 		success: function(jsonData) {
-			for (var i = 0; i < jsonData.data.length; i++) {
-				addJigsaw("https"+jsonData.data[i].url.slice(4), decode360Tag(jsonData.data[i].tag))
+		    console.log(jsonData.data.list.length);
+			for (var i = 0; i < jsonData.data.list.length; i++) {
+				// addJigsaw("https"+jsonData.data.list[i].url.slice(4), decode360Tag(jsonData.data.list[i].tag))
+				addJigsaw("https"+jsonData.data.list[i].url.slice(4),jsonData.data.list[i].tag)
 			}
 			resizeHeight();
 			jigsaw.ajaxing = false;
@@ -288,6 +293,6 @@ function changeTitle(obj) {
 	$('title').html($(obj).html() + ' - 电脑壁纸')
 }
 console.info(
-	'作者：mengkun(http://mkblog.cn)\n壁纸来源于：360壁纸库、必应首页壁纸以及金山词霸开放平台\n Github：https://github.com/mengkunsoft/wallpaper \n 美化版Github：https://github.com/uxiaohan/wallpaper \n 访问旧版(http://bizhi.tanmantang.com/old/'
+	'Github源码：https://github.com/tanmantang/mt-wallpaper 点亮你的小♥(ˆ◡ˆԅ)哟\n\n作者：mengkun(http://mkblog.cn)\n壁纸来源于：360壁纸库、必应首页壁纸以及金山词霸开放平台 \n 美化版Github：https://github.com/uxiaohan/wallpaper \n 原版Github：https://github.com/mengkunsoft/wallpaper '
 );
 
