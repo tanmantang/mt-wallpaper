@@ -20,6 +20,6 @@
 
 ### 体验地址 [https://bizhi.tanmantang.com](https://bizhi.tanmantang.com "https://bizhi.tanmantang.com")
 
-### 体验地址 [https://starlit-nougat-dc74d1.netlify.app](https://starlit-nougat-dc74d1.netlify.app "https://starlit-nougat-dc74d1.netlify.app")
+### 备用体验地址 [https://starlit-nougat-dc74d1.netlify.app](https://starlit-nougat-dc74d1.netlify.app "https://starlit-nougat-dc74d1.netlify.app")
 
 ![首页截图](https://p.pstatp.com/origin/pgc-image/6088f4ca6d574a6fbf098460cd5cc14b "首页截图")
